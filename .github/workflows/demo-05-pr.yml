@@ -6,8 +6,8 @@ on:
       - main
   
 jobs:
-  build-test-branch:
-    name: "Build and Test Of PR"
+  build:
+    name: Build and Test
 
     runs-on: ubuntu-latest
 
