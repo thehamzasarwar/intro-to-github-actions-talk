@@ -177,3 +177,5 @@ jobs:
       with: 
         app-name: mywebapp-actions # Replace with your app name
         package: 'mywebappbuildartifacts'
+    - name: 'Notify deployment'
+      run: echo "Deployment to ${{ inputs.environment }} completed successfully!"
