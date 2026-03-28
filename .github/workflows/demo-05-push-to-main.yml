@@ -31,7 +31,7 @@ jobs:
         dotnet test "${{ github.workspace }}/mywebapp/mywebapp.sln" --no-restore --verbosity normal  --logger "trx;LogFileName=test-results.trx"
 
     - name: Test Report
-      uses: dorny/test-reporter@v1.5.0
+      uses: dorny/test-reporter@v1
       if: success() || failure()    # run this step even if previous step failed
       with:
         name: XUnit Tests            # Name of the check run which will be created
@@ -90,7 +90,7 @@ jobs:
    
     # Deploy to Azure Web apps
     - name: 'Run Azure webapp deploy action using publish profile credentials'
-      uses: azure/webapps-deploy@v2
+      uses: azure/webapps-deploy@v3
       with: 
         app-name: mywebapp-actions # Replace with your app name
         package: 'mywebappbuildartifacts'
@@ -131,7 +131,7 @@ jobs:
    
     # Deploy to Azure Web apps
     - name: 'Run Azure webapp deploy action using publish profile credentials'
-      uses: azure/webapps-deploy@v2
+      uses: azure/webapps-deploy@v3
       with: 
         app-name: mywebapp-actions # Replace with your app name
         package: 'mywebappbuildartifacts'
@@ -173,7 +173,7 @@ jobs:
    
     # Deploy to Azure Web apps
     - name: 'Run Azure webapp deploy action using publish profile credentials'
-      uses: azure/webapps-deploy@v2
+      uses: azure/webapps-deploy@v3
       with: 
         app-name: mywebapp-actions # Replace with your app name
         package: 'mywebappbuildartifacts'
