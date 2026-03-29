@@ -62,4 +62,4 @@ jobs:
       - name: Deploy to PROD
         run: |
           echo "Deploying to PROD environment..."
-          echo "Application deployed to PROD successfully!" completed successfully!"
+          echo "Application deployed to PROD successfully!"
